@@ -1,16 +1,10 @@
-// import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import IterationSample from './IterationSample';
 
-function App() {
-	const name = '리액트';
-	return (
-		<div>
-			<div className="react">{name}</div>
-			<h1>들여쓰기가 이상한</h1>
-			<h2>코드</h2>
-			<p>입니다.</p>
-		</div>
-	);
+class App extends Component {
+	render() {
+		return <IterationSample />;
+	}
 }
 
 export default App;
