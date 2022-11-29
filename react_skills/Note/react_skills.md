@@ -302,7 +302,50 @@ yarn add styled-components
 ### 21.백엔드 프로그래밍: Node.js의 Koa 프레임워크
 
 - Node.js 런타임 설치 확인
-
 ```
 node --version
 ```
+#### 21.2.2 프로젝트 생성
+- 블로그 서비스와 연동할 서버
+- blog 디렉터리 / blog-backend 디렉터리
+- yarn init -y 명령어를 실행하여 패키지 정보를 생성
+```shell
+mkdir blog
+cd blog
+mkdir blog-backend
+cd blog-backend
+yarn init -y
+```
+- 디렉터리에 package.json 파일 생성
+```json
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
+```
+- Koa 웹 프레임워크를 설치
+```
+yarn add koa
+```
+- koa가 dependencies에 추가
+```json
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
+```
+#### 21.2.3 ESLint와 Prettier 설정
+```
+yarn add -dev eslint
+yarn run eslint --init
+```
+
+### 21.3 Koa 기본 사용법
+- 
