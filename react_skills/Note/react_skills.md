@@ -243,7 +243,125 @@ yarn add styled-components
 
 ### 10. 일정관리 웹 애플리케이션 만들기
 
--abc
+#### 10.1 프로젝트 준비하기
+##### 10.1.1 프로젝트 생성 및 필요한 라이브러리 설치
+- create-react-app을 사용하여 프로젝트를 생성
+```
+yarn create react-app todo-app
+```
+- 라이브러리 설치
+```
+yarn add sass classnames react-icons
+```
+##### 10.1.2 Prettier 설정
+- 프로젝트의 최상위 디렉터리에 .prettierrc
+```javascript
+{
+    "singleQuote": true,
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "printWidth": 80
+}
+```
+##### 10.1.3 index.css수정
+- 프로젝트의 글로벌 스타일 파일 index.css수정
+```css
+body {
+  margin: 0;
+  padding: 0;
+  background: #e9ecef;
+}
+```
+##### 10.1.4 App 컴포넌트 초기화
+```javascript
+const App = () => {
+  return <div>Todo App을 만들자!</div>
+};
+
+export default App;
+```
+
+#### 10.2 UI 구성하기
+##### 10.2.1 TodoTemplate만들기
+- TodoTemplate.js
+```javascript
+import './TodoTemplate.scss';
+
+const TodoTemplate = (children) => {
+    return (
+        <div className="TodoTemplate">
+            <div className="app-title">일정 관리</div>
+            <div className="content">{children}</div>
+        </div>
+    );
+};
+
+export default TodoTemplate;
+```
+- TodoTemplate.scss
+```css
+.TodoTemplate {
+    width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .app-title {
+        background: #22b8cf;
+        color: white;
+        height: 4rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content {
+        background: white;
+    }
+}
+```
+- App.js
+```javascript
+import TodoTemplate from "./components/TodoTemplate";
+
+const App = () => {
+  return <TodoTemplate>Todo App을 만들자!</TodoTemplate>
+};
+
+export default App;
+```
+- 자동완성을 위한 jsconfig.json 파일
+- ctrl + Space : 자동완성 단축기
+```json
+{
+    "compilerOptions": {
+        "target": "es6"
+    }
+}
+```
+##### 10.2.2 TodoInsert만들기
+- TodoInsert.js
+```javascript
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
